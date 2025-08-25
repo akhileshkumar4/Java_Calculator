@@ -99,6 +99,10 @@ Input A = 10, B = 5, Operation = Multiply
 Output = 50
 
 Interface(How its look):
+## Project Screenshot
+
+![Calculator UI](calculator/screenshot.png)
+
 
 
 
