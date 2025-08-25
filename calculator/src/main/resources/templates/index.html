@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Java Calculator</title>
+    <link rel="stylesheet" href="/style.css" />
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light d-flex justify-content-center align-items-center vh-100">
+
+<div class="card shadow-lg p-4 rounded-4" style="width: 400px;">
+    <h2 class="text-center mb-4 text-primary">🔢 Java Calculator</h2>
+
+    <form action="/calc" method="post">
+
+        <div class="mb-3">
+            <label class="form-label">A</label>
+            <input type="number" step="any" name="a" class="form-control" placeholder="e.g. 12.5" value="[[${a}]]" required />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">B</label>
+            <input type="number" step="any" name="b" class="form-control" placeholder="e.g. 3" value="[[${b}]]" required />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Operation</label>
+            <select name="op" class="form-select">
+                <option value="add" th:selected="${op}=='add'">➕ Add</option>
+                <option value="sub" th:selected="${op}=='sub'">➖ Subtract</option>
+                <option value="mul" th:selected="${op}=='mul'">✖ Multiply</option>
+                <option value="div" th:selected="${op}=='div'">➗ Divide</option>
+                <option value="pow" th:selected="${op}=='pow'">^ Power</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100">Calculate</button>
+    </form>
+
+    <div class="mt-4 text-center">
+        <h4 th:if="${result != null}">✅ Result: <span class="text-success" th:text="${result}"></span></h4>
+    </div>
+</div>
+
+</body>
+</html>

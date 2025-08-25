@@ -1,0 +1,17 @@
+body {
+    background: linear-gradient(135deg, #89f7fe, #66a6ff);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.card {
+    border: none;
+}
+
+h2 {
+    font-weight: bold;
+}
+
+button {
+    font-size: 1.1rem;
+    padding: 10px;
+}
