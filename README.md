@@ -98,6 +98,10 @@ Input A = 10, B = 5, Operation = Multiply
 
 Output = 50
 
+Interface(How its look):
+
+
+
 🛠️ Stopping the Server
 
 Agar IDE se run kar rahe ho → Console ke upar red stop button dabao.
